@@ -1,0 +1,71 @@
+Open the window
+Open the sunroof
+Turn on the air conditioning
+Turn on the radio
+Turn on music
+Turn on the lights
+Turn on the hazard lights
+Turn on seat heating
+Open the trunk
+Turn on ACC
+Activate auto follow
+Activate cruise control
+Set cruise speed
+Turn on the TV
+Turn on the purifier
+Close the window
+Close the sunroof
+Turn off the air conditioning
+Turn off the radio
+Turn off QQ Music
+Turn off the lights
+Turn off the hazard lights
+Turn off seat heating
+Close the trunk
+Turn off ACC
+Deactivate follow mode
+Deactivate cruise control
+Turn off the TV
+Turn off the purifier
+Increase fan speed
+Decrease fan speed
+Set temperature to degrees
+Increase temperature
+Decrease temperature
+Increase volume
+Decrease volume
+Play
+Play the previous track
+Play the next track
+Change the song
+Stop playback
+Go to
+Navigate to and then pass by
+Depart for the office
+Navigate home
+I want to go to the nearest
+Book a meeting at
+Book a restaurant at
+I want to order
+Remind me later to go to
+Note something
+Record something on the date
+Remind me tomorrow to
+Wake me up
+Set an alarm
+Switch to the mode
+Where is the nearest
+How is the traffic ahead
+How is the weather
+Call
+Send an email to
+Text to
+What is the tire pressure
+What time is it
+How much fuel is left
+How much battery is left
+What is the current price
+Search on Google
+Search on Amazon
+Google something
+Emergency call
