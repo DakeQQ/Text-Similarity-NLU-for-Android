@@ -5,5 +5,5 @@
 4. Remember to decompress the *.so zip file stored in the libs/arm64-v8a folder.
 5. The demo models, named 'GTE', were converted from ModelScope and underwent code optimizations to achieve extreme execution speed.
 6. Therefore, the inputs & outputs of the demo models are slightly different from the original one.
-7. I will make the exported method public later.
+7. We will make the exported method public later.
 8. Twinkle Twinkle Little Star~
