@@ -1,2 +1,2 @@
 # Text-Similarity-for-Android
-Demonstrating text similarity on Android with mainstream accelerators.
+Demonstration of running text similarity with mainstream accelerators on Android device. 
