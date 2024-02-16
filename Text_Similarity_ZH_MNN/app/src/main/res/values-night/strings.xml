@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="send">发送 Send</string>
+    <string name="clear">清除 Clear</string>
+    <string name="type_your_message">请输入问题 \nType your message…</string>
+</resources>
