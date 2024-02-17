@@ -6,7 +6,7 @@ bool report_error_armnn_delegate(const char* errorMessage) {  // You an edit it 
 
 extern "C"
 JNIEXPORT jboolean JNICALL
-Java_com_example_myapplication_MainActivity_Load_1Models_10(JNIEnv *env, jclass clazz,
+Java_com_example_myapplication_MainActivity_Load_1Models_10(JNIEnv *env, jobject clazz,
                                                             jobject asset_manager,
                                                             jboolean use_uint8,
                                                             jboolean use_int8,
