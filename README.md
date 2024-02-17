@@ -24,7 +24,7 @@
 2. MNN: 2.8.1
 3. NCNN: 20240102
 4. ONNX: 1.17.0
-5. Paddle-Lite: 2.13.rc
+5. Paddle-Lite: 2.13-rc
 6. Pytorch Mobile Java: 2.1.0
 7. TFLite C++: 2.15.0
 8. TFLite Java: 2.14.0
