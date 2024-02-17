@@ -23,7 +23,7 @@
 1. ArmNN: 23.11
 2. MNN: 2.8.1
 3. NCNN: 20240102
-4. ONNX: 1.17.0
+4. ONNX Runtime: 1.17.0
 5. Paddle-Lite: 2.13-rc
 6. Pytorch Mobile Java: 2.1.0
 7. TFLite C++: 2.15.0
