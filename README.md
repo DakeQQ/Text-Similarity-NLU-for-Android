@@ -31,4 +31,3 @@
 # 测试 Benchmark
 1. This test is for fun only.
 2. No values mean the run failed.
-![Project Logo](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/benchmark.png?raw=true)
