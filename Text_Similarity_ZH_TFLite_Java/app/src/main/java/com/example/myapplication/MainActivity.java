@@ -94,12 +94,10 @@ public class MainActivity extends AppCompatActivity {
             Read_Assets(file_name_vocab_GTE, mgr);
             score_data_commands = new float[amount_of_commands][model_hidden_size_GTE];
             score_pre_calculate = new float[amount_of_commands];
-            runOnUiThread(() -> {
-                for (int i = 0; i < amount_of_commands; i++) {
-                    score_data_commands[i] = Run_Text_Embedding(Tokenizer(commands.get(i)));
-                    score_pre_calculate[i] = (float) Math.sqrt(Dot(score_data_commands[i], score_data_commands[i]));
-                }
-            });
+            for (int i = 0; i < amount_of_commands; i++) {
+                score_data_commands[i] = Run_Text_Embedding(Tokenizer(commands.get(i)));
+                score_pre_calculate[i] = (float) Math.sqrt(Dot(score_data_commands[i], score_data_commands[i]));
+            }
         } else {
             addHistory(ChatMessage.TYPE_SYSTEM, "模型加载失败。\nModel loading failed.");
         }
