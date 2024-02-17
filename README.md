@@ -19,7 +19,7 @@
 7. 我们未来会提供转换导出的方法。
 # 演示结果
 ![Demo Animation](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/text_zh.gif?raw=true)
-# Version Information:  
+# 版本信息 Version Information
 1. ArmNN: v23.11
 2. MNN: v2.8.1
 3. NCNN: v20240102
