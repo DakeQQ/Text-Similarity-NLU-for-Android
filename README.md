@@ -32,4 +32,5 @@
 1. 测试仅供参考。This test is for fun only.
 2. 测试设备为Kirin_990_5G，选择2xA76（#1，#2）设置。Test device is Kirin_990_5G with 2xA76 (#1,#2) setting.
 3. 无值表示运行失败或与CPU之间没有明显差异。No values mean the run failed or no obvious difference between the CPU backends.
+4. 第一名和第二名的耗时比（1st/2nd）约为0.842。The time cost ratio between the 1st & 2nd (1st/2nd) is approximately 0.842.
 ![Project Logo](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/benchmark.png?raw=true)
