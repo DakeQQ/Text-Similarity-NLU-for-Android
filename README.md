@@ -29,6 +29,6 @@
 7. TFLite C++: 2.15.0
 8. TFLite Java: 2.14.0
 # 测试 Benchmark
-1. This test is for fun only.
-2. No values mean the run failed.
+1. 测试仅供参考。This test is for fun only.
+2. 无值表示运行失败或与CPU之间没有明显差异。No values mean the run failed or no obvious difference between the CPU backends.
 ![Project Logo](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/benchmark.png?raw=true)
