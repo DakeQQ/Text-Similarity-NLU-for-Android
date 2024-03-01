@@ -221,13 +221,8 @@ public class MainActivity extends AppCompatActivity {
                 max_position = i;
             }
         }
-        int[] TopK;
-        if (top > 1) {
-            temp_array[max_position] = -999.f;
-            TopK = Find_TopK(temp_array);
-        } else {
-            TopK = new int[1];
-        }
+        temp_array[max_position] = -999.f;
+        int[] TopK = Find_TopK(temp_array);
         if (max_score > threshold_similar) {
             TopK[0] = max_position;
         } else {
