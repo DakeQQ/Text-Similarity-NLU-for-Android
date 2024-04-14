@@ -18,8 +18,9 @@
 5. Remember to decompress the *.so zip file stored in the libs/arm64-v8a folder.
 6. The demo models, named 'GTE', were converted from ModelScope and underwent code optimizations to achieve extreme execution speed.
 7. Therefore, the inputs & outputs of the demo models are slightly different from the original one.
-8. We will make the exported method public later.
-9. See more projects: https://dakeqq.github.io/overview/
+8. To better adapt to ONNX Runtime on Android, the export did not use dynamic axes. Therefore, the exported ONNX model may not be optimal for x86_64 systems.
+9. We will make the exported method public later.
+10. See more projects: https://dakeqq.github.io/overview/
 # Demo Results
 ![Demo Animation](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/text_en.gif?raw=true)
 
@@ -44,8 +45,9 @@
 6. 记得解压存放在libs/arm64-v8a文件夹中的*.so压缩文件。
 7. 演示模型名为'GTE'，它们是从ModelScope转换来的，并经过代码优化，以实现极致执行速度。
 8. 因此，演示模型的输入输出与原始模型略有不同。
-9. 我们未来会提供转换导出的方法。
-10. 看更多項目: https://dakeqq.github.io/overview/
+9. 为了更好的适配ONNXRuntime-Android，导出时未使用dynamic-axes.因此导出的ONNX模型对x86_64而言不一定是最优解.
+10. 我们未来会提供转换导出的方法。
+11. 看更多項目: https://dakeqq.github.io/overview/
 # 演示结果
 ![Demo Animation](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/text_zh.gif?raw=true)
 # 版本信息 Version Information
