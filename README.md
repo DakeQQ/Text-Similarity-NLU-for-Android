@@ -22,8 +22,6 @@
 8. To better adapt to ONNX Runtime on Android, the export did not use dynamic axes. Therefore, the exported ONNX model may not be optimal for x86_64 systems.
 9. We will make the exported method public later.
 10. See more projects: https://dakeqq.github.io/overview/
-# Demo Results
-![Demo Animation](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/text_en.gif?raw=true)
 
 # 文本相似度安卓应用
 1. 在Android设备上使用主流加速框架运行文本相似度应用。包含:
@@ -50,7 +48,8 @@
 9. 为了更好的适配ONNXRuntime-Android，导出时未使用dynamic-axes. 因此导出的ONNX模型对x86_64而言不一定是最优解.
 10. 我们未来会提供转换导出的方法。
 11. 看更多項目: https://dakeqq.github.io/overview/
-# 演示结果
+# Demo Results 演示结果
+![Demo Animation](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/text_en.gif?raw=true)
 ![Demo Animation](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/text_zh.gif?raw=true)
 # 版本信息 Version Information
 1. ArmNN: 23.11
