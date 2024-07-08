@@ -10,8 +10,9 @@
      - TFLite (Java)
      - MegEngine (under develope)
      - Noah-Bolt (under develope)
+     - OpenVINO Android (under develope)
+     - Pytorch Mobile (C++, under develope)
      - QNN (under develope)
-     - SNPE (under develope)
      - TVM (under develope)
 3. The demo models were uploaded to the drive: https://drive.google.com/drive/folders/1N7kUqRUI0aE6C2Rb6IcGQzd4D5FRZ-XG?usp=drive_link
 4. After downloading, place the model into the assets folder.
@@ -36,8 +37,9 @@
      - TFLite (Java)
      - MegEngine (开发中)
      - Noah-Bolt (开发中)
+     - OpenVINO Android (开发中)
+     - Pytorch Mobile (C++, 开发中)
      - QNN (开发中)
-     - SNPE (开发中)
      - TVM (开发中)
 3. 演示模型已上传至云端硬盘：https://drive.google.com/drive/folders/1N7kUqRUI0aE6C2Rb6IcGQzd4D5FRZ-XG?usp=drive_link
 4. 百度: https://pan.baidu.com/s/1MA54Se04zBidmfVMBLk9wg?pwd=dake 提取码: dake
