@@ -6,10 +6,10 @@ import onnxruntime
 from transformers import AutoModel
 from GTE_config import MAX_INPUT_WORDS
 
-model_path = r"C:\Users\dake\Downloads\GTE\nlp_gte_sentence-embedding_chinese-small"
+model_path = r"C:\Users\dake\Downloads\GTE\nlp_gte_sentence-embedding_chinese-small"  # Path to the entire downloaded GTE model project.
 modified_path = r'.\modeling_modified\modeling_bert.py'  # The path where the modified modeling_bert.py stored.
 transformers_bert_path = r'C:\Users\dake\.conda\envs\python_311\Lib\site-packages\transformers\models\bert\modeling_bert.py'  # The original modeling_bert.py located in the transformers/model/bert folder.
-save_path = r"C:\Users\dake\Downloads\GTE\Model_GTE.onnx"
+save_path = r"C:\Users\dake\Downloads\GTE\Model_GTE.onnx"  # The exported onnx model save path.
 vocab_path = f'{model_path}/vocab.txt'  # Set the path where the Model_GTE vocab.txt stored.
 
 
