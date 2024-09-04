@@ -6,16 +6,15 @@ import onnxruntime
 from transformers import AutoModel
 from GTE_config import MAX_INPUT_WORDS
 
-model_path = r"C:\Users\Downloads\GTE\nlp_gte_sentence-embedding_chinese-small"
+model_path = r"C:\Users\dake\Downloads\GTE\nlp_gte_sentence-embedding_chinese-small"
 modified_path = r'.\modeling_modified\modeling_bert.py'  # The path where the modified modeling_bert.py stored.
-transformers_bert_path = r'C:\Users\dake\.conda\envs\python_311\Lib\site-packages\transformers\models\bert\modeling_bert.py'
-export_folder_path = r"C:\Users\Downloads\GTE"
+transformers_bert_path = r'C:\Users\dake\.conda\envs\python_311\Lib\site-packages\transformers\models\bert\modeling_bert.py'  # The original modeling_bert.py located in the transformers/model/bert folder.
+save_path = r"C:\Users\dake\Downloads\GTE\Model_GTE.onnx"
 vocab_path = f'{model_path}/vocab.txt'  # Set the path where the Model_GTE vocab.txt stored.
-save_path = export_folder_path + r"\Model_GTE.onnx"
 
 
 # Load the model
-shutil.copyfile(modified_path, transformers_bert_path)
+shutil.copyfile(modified_path, transformers_bert_path)  # Replace the original modeling_bert.py
 model = AutoModel.from_pretrained(model_path)
 type(model).__call__ = type(model).forward
 model = model.eval()
@@ -32,7 +31,7 @@ torch.onnx.export(model,
                   save_path,
                   verbose=False,
                   input_names=['input_ids', 'attention_mask'],
-                  output_names=['embedding_vector'],
+                  output_names=['encoder_output'],
                   do_constant_folding=True,
                   opset_version=17)
 
@@ -76,6 +75,7 @@ with open(vocab_path, 'r', encoding='utf-8') as file:
 vocab = np.array([line.strip() for line in vocab], dtype=np.str_)
 
 # Check the model on X86_64 ONNXRuntime
+print("Test the exported GTE model by ONNXRuntime.")
 session_opts = onnxruntime.SessionOptions()
 session_opts.log_severity_level = 3  # error level, it a adjustable value.
 session_opts.inter_op_num_threads = 0  # Run different nodes with num_threads. Set 0 for auto.
@@ -83,8 +83,6 @@ session_opts.intra_op_num_threads = 4  # Under the node, execute the operators w
 session_opts.enable_cpu_mem_arena = True  # True for execute speed; False for less memory usage.
 session_opts.execution_mode = onnxruntime.ExecutionMode.ORT_SEQUENTIAL
 session_opts.graph_optimization_level = onnxruntime.GraphOptimizationLevel.ORT_ENABLE_ALL
-
-print("Test the exported GTE model by ONNXRuntime.")
 ort_session_A = onnxruntime.InferenceSession(save_path, sess_options=session_opts, providers=['CPUExecutionProvider'])
 in_name_A0 = ort_session_A.get_inputs()[0].name
 in_name_A1 = ort_session_A.get_inputs()[1].name
