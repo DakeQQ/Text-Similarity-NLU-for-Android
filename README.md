@@ -20,8 +20,11 @@
 6. The demo models, named 'GTE', were converted from ModelScope and underwent code optimizations to achieve extreme execution speed.
 7. Therefore, the inputs & outputs of the demo models are slightly different from the original one.
 8. To better adapt to ONNX Runtime on Android, the export did not use dynamic axes. Therefore, the exported ONNX model may not be optimal for x86_64 systems.
-9. We will make the exported method public later.
-10. See more projects: https://dakeqq.github.io/overview/
+9. To export the model on your own, please go to the 'Export_ONNX' folder, follow the comments to set the folder path and GTE_config.py, and then execute the GTE_Export.py Python script. Next, quantize / optimize the onnx model by yourself.
+10. If use onnxruntime.tools.convert_onnx_models_to_ort to convert to the *.ort format, it will automatically add Cast operators that changes fp16 multiplication to fp32.
+11. The quantization method for the model can be seen in the folder "Do_Quantize".
+12. The q4(uint4) quantization method is not currently recommended because the "MatMulNBits" operator in ONNX Runtime is performing poorly.
+13. See more projects: https://dakeqq.github.io/overview/
 
 # 文本相似度安卓应用
 1. 在Android设备上使用主流加速框架运行文本相似度应用。包含:
@@ -46,8 +49,11 @@
 7. 演示模型名为'GTE'，它们是从ModelScope转换来的，并经过代码优化，以实现极致执行速度。
 8. 因此，演示模型的输入输出与原始模型略有不同。
 9. 为了更好的适配ONNXRuntime-Android，导出时未使用dynamic-axes. 因此导出的ONNX模型对x86_64而言不一定是最优解.
-10. 我们未来会提供转换导出的方法。
-11. 看更多項目: https://dakeqq.github.io/overview/
+10. 想自行导出模型请前往“Export_ONNX”文件夹，按照注释操作设定文件夹路径和GTE_config.py，然后执行GTE_Export.py的python脚本。下一步，自己动手量化或优化导出的ONNX模型。
+11. 若使用onnxruntime.tools.convert_onnx_models_to_ort转成*.ort格式，它会自动添加Cast算子将fp16乘法转成fp32。
+12. 模型的量化方法可以在文件夹 "Do_Quantize" 中查看。
+13. 现在不建议使用q4(uint4)量化方法, 因为ONNX Runtime的运算符"MatMulNBits"表现不佳。
+14. 看更多項目: https://dakeqq.github.io/overview/
 # Demo Results 演示结果
 ![Demo Animation](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/text_en.gif?raw=true)
 ![Demo Animation](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/text_zh.gif?raw=true)
