@@ -466,7 +466,7 @@ class BertEncoder(nn.Module):
                 hidden_states,
                 attention_mask,
             )
-        return hidden_states[0, 0, :]
+        return hidden_states[:, 0, :]
 
 
 class BertPooler(nn.Module):
