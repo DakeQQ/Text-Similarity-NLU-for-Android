@@ -435,7 +435,7 @@ class BertLayer(nn.Module):
     def forward(
             self,
             hidden_states: torch.Tensor,
-            attention_mask: Optional[torch.FloatTensor] = None,
+            attention_mask: torch.FloatTensor,
     ) -> Tuple[torch.Tensor]:
         self_attention_outputs = self.attention(
             hidden_states,
@@ -734,7 +734,7 @@ class BertModel(BertPreTrainedModel):
             self,
             input_ids: torch.IntTensor,
             attention_mask: torch.FloatTensor,
-    ) -> Union[Tuple[torch.Tensor], BaseModelOutputWithPoolingAndCrossAttentions]:
+    ) -> torch.Tensor:
         return self.encoder(
             self.embeddings(input_ids=input_ids),
             attention_mask=attention_mask
