@@ -79,6 +79,7 @@ model = optimize_model(quanted_model_path,
                        provider=provider,
                        verbose=False,
                        model_type='bert')
+model.convert_float_to_float16()
 model.save_model_to_file(quanted_model_path, use_external_data_format=is_large_model)
 del model
 gc.collect()
