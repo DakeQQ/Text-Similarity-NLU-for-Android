@@ -26,14 +26,15 @@ token_end_flag = 102
 input_ids = torch.zeros((1, MAX_INPUT_WORDS), dtype=torch.int32)
 attention_mask = torch.ones((1, 1, 1, MAX_INPUT_WORDS), dtype=torch.float32) * -65504.0   # Set `attention_mask` to -65504.0 at positions with `input_ids=0`, and 1.0 elsewhere.
 print("Export GTE Start...")
-torch.onnx.export(model,
-                  (input_ids, attention_mask),
-                  save_path,
-                  verbose=False,
-                  input_names=['input_ids', 'attention_mask'],
-                  output_names=['encoder_output'],
-                  do_constant_folding=True,
-                  opset_version=17)
+with torch.inference_mode():
+  torch.onnx.export(model,
+                    (input_ids, attention_mask),
+                    save_path,
+                    verbose=False,
+                    input_names=['input_ids', 'attention_mask'],
+                    output_names=['encoder_output'],
+                    do_constant_folding=True,
+                    opset_version=17)
 
 del model
 del input_ids
