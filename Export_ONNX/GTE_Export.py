@@ -100,7 +100,7 @@ input_ids, ids_len = tokenizer(sentence_2)
 attention_mask = np.ones((1, 1, 1, MAX_INPUT_WORDS), dtype=np.float32) * -65504.0
 attention_mask[:, :, :, :ids_len] = 1.0  # Set `attention_mask` to -65504.0 at positions with `input_ids=0`, and 1.0 elsewhere.
 output_1 = ort_session_A.run([out_name_A0], {in_name_A0: input_ids, in_name_A1: attention_mask})[0][0]
-cos_similarity = np.dot(output_0, output_1) / (np.sqrt(np.dot(output_0, output_0)) * np.sqrt(np.dot(output_1, output_1)))
+cos_similarity = np.dot(output_0, output_1) / np.sqrt(np.dot(output_0, output_0) * np.dot(output_1, output_1))
 
 print(f"\nThe Cosine Similarity between: \n\n1.'{sentence_1}' \n2.'{sentence_2}' \n\nScore = {cos_similarity}")
 
