@@ -28,7 +28,7 @@ Frameworks currently under development:
 
 ## Getting Started
 
-### Demo Models
+### 演示结果 Demo Models
 
 You can download the demo models from:
 - [Google Drive](https://drive.google.com/drive/folders/1N7kUqRUI0aE6C2Rb6IcGQzd4D5FRZ-XG?usp=drive_link)
@@ -130,21 +130,6 @@ This benchmark is for informational and entertainment purposes only.
 
 查看更多项目，请访问：[DakeQQ 项目概览](https://dakeqq.github.io/overview/)
 
-## 演示结果
-
-![演示动画 (英文)](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/text_en.gif?raw=true)
-![演示动画 (中文)](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/text_zh.gif?raw=true)
-
-## 版本信息
-
-- **ArmNN:** 23.11
-- **MNN:** 2.8.1
-- **NCNN:** 20240102
-- **ONNX Runtime:** 1.17.0
-- **Paddle-Lite:** 2.13-rc
-- **Pytorch Mobile Java:** 2.1.0
-- **TFLite C++:** 2.15.0
-- **TFLite Java:** 2.14.0
 
 ## 测试基准
 
@@ -153,8 +138,5 @@ This benchmark is for informational and entertainment purposes only.
 - **测试设备：**Kirin_990_5G，设置为2xA76（#1，#2）。
 - 无值表示运行失败或与CPU后端之间没有明显差异。
 - 第一名和第二名的耗时比约为0.842。
-
-![基准测试结果](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/benchmark.png?raw=true)
-
 --- 
 
