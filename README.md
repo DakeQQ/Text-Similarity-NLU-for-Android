@@ -1,8 +1,10 @@
+
+
 ---
 
 # Text Similarity for Android
 
-This project demonstrates running text similarity applications with mainstream accelerators on Android devices. The supported frameworks include:
+This project showcases how to run text similarity applications using popular accelerators on Android devices. Supported frameworks include:
 
 - **ArmNN**
 - **MNN**
@@ -15,7 +17,7 @@ This project demonstrates running text similarity applications with mainstream a
 
 ## To-Do List
 
-The following frameworks are currently under development:
+Frameworks currently under development:
 
 - **MegEngine**
 - **Noah-Bolt**
@@ -28,23 +30,23 @@ The following frameworks are currently under development:
 
 ### Demo Models
 
-The demo models are available for download:
+You can download the demo models from:
 - [Google Drive](https://drive.google.com/drive/folders/1N7kUqRUI0aE6C2Rb6IcGQzd4D5FRZ-XG?usp=drive_link)
 
-Once downloaded, place the model files into the `assets` folder. Make sure to decompress the `*.so` zip files located in the `libs/arm64-v8a` folder.
+After downloading, place the model files in the `assets` folder. Remember to extract the `*.so` files from the zip archive located in the `libs/arm64-v8a` folder.
 
 ### Model Details
 
-The demo models, named 'GTE', were converted from ModelScope and optimized for maximum execution speed. Note that the inputs and outputs of these demo models may differ slightly from the original.
+The demo models, referred to as 'GTE', have been converted from ModelScope and optimized for maximum execution speed. Note that the inputs and outputs of these demo models may vary slightly from the originals.
 
-- The ONNX Runtime adaptation for Android did not use dynamic axes, so the exported ONNX model might not be optimal for x86_64 systems.
-- To export the model yourself, navigate to the `Export_ONNX` folder, set the folder path and `GTE_config.py` as per the comments, and execute the `GTE_Export.py` Python script. Afterward, you can quantize/optimize the ONNX model as needed.
+- For the ONNX Runtime adaptation on Android, dynamic axes were not used, making the exported ONNX model potentially suboptimal for x86_64 systems.
+- To export the model yourself, go to the `Export_ONNX` folder, adjust the folder path and `GTE_config.py` according to the comments, and run the `GTE_Export.py` Python script. You can then quantize or optimize the ONNX model as needed.
 
 ### Quantization
 
-- Using `onnxruntime.tools.convert_onnx_models_to_ort` to convert to the `*.ort` format will automatically add Cast operators that change fp16 multiplication to fp32.
-- The quantization method is detailed in the "Do_Quantize" folder.
-- The `q4(uint4)` quantization method is not recommended due to the poor performance of the "MatMulNBits" operator in ONNX Runtime.
+- When using `onnxruntime.tools.convert_onnx_models_to_ort` to convert to the `*.ort` format, Cast operators are automatically added, changing fp16 multiplication to fp32.
+- Details on the quantization method can be found in the "Do_Quantize" folder.
+- The `q4(uint4)` quantization method is not recommended due to the subpar performance of the "MatMulNBits" operator in ONNX Runtime.
 
 ## Additional Resources
 
@@ -68,9 +70,9 @@ For more projects, visit: [DakeQQ Projects Overview](https://dakeqq.github.io/ov
 
 ## Benchmark
 
-This benchmark is for reference and entertainment purposes only.
+This benchmark is for informational and entertainment purposes only.
 
-- **Test Device:** Kirin_990_5G with 2xA76 (#1, #2) setting.
+- **Test Device:** Kirin_990_5G with 2xA76 (#1, #2) configuration.
 - No values indicate a failed run or no significant difference between CPU backends.
 - The time cost ratio between the 1st and 2nd place is approximately 0.842.
 
@@ -155,3 +157,4 @@ This benchmark is for reference and entertainment purposes only.
 ![基准测试结果](https://github.com/DakeQQ/Text-Similarity-for-Android/blob/main/benchmark.png?raw=true)
 
 --- 
+
